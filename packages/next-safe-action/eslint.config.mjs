@@ -33,7 +33,7 @@ export default [
 
 			parserOptions: {
 				project: "./tsconfig.json",
-				tsconfigRootDir: "./packages/next-safe-action",
+				tsconfigRootDir: ".",
 			},
 		},
 
