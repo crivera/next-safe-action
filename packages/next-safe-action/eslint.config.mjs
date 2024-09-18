@@ -1,11 +1,11 @@
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import reactHooks from "eslint-plugin-react-hooks";
 import { fixupPluginRules } from "@eslint/compat";
+import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
+import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import reactHooks from "eslint-plugin-react-hooks";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,7 +33,7 @@ export default [
 
 			parserOptions: {
 				project: "./tsconfig.json",
-				tsconfigRootDir: "/Users/chris.rivera/projects/personal/next-safe-action/packages/next-safe-action",
+				tsconfigRootDir: "./packages/next-safe-action",
 			},
 		},
 
