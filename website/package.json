@@ -21,8 +21,8 @@
 		"@mdx-js/react": "^3.0.1",
 		"acorn": "8.12.1",
 		"clsx": "^2.1.1",
-		"lucide-react": "^0.428.0",
-		"prism-react-renderer": "^2.3.1",
+		"lucide-react": "^0.441.0",
+		"prism-react-renderer": "^2.4.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1"
 	},
@@ -31,11 +31,11 @@
 		"@docusaurus/tsconfig": "^3.5.2",
 		"@docusaurus/types": "^3.5.2",
 		"autoprefixer": "^10.4.20",
-		"postcss": "^8.4.41",
+		"postcss": "^8.4.47",
 		"postcss-nested": "^6.2.0",
-		"tailwindcss": "^3.4.10",
+		"tailwindcss": "^3.4.12",
 		"tailwindcss-bg-patterns": "^0.3.0",
-		"typescript": "^5.5.4"
+		"typescript": "^5.6.2"
 	},
 	"browserslist": {
 		"production": [

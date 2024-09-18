@@ -290,4 +290,12 @@ export class SafeActionClient<
 			throwValidationErrors: this.#throwValidationErrors,
 		}).stateAction(serverCodeFn, utils);
 	}
+
+	schemas() {
+		return {
+			metadata: this.#metadata,
+			inputSchema: this.#inputSchemaFn,
+			outputSchema: this.#outputSchema,
+		};
+	}
 }
