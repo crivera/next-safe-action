@@ -34,8 +34,10 @@ export function actionBuilder<
 	ServerError,
 	MetadataSchema extends Schema | undefined = undefined,
 	MD = MetadataSchema extends Schema ? Infer<Schema> : undefined, // metadata type (inferred from metadata schema)
+	// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 	Ctx extends object = {},
 	ISF extends (() => Promise<Schema>) | undefined = undefined, // input schema function
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 	IS extends Schema | undefined = ISF extends Function ? Awaited<ReturnType<ISF>> : undefined, // input schema
 	OS extends Schema | undefined = undefined, // output schema
 	const BAS extends readonly Schema[] = [],
@@ -321,6 +323,7 @@ export function actionBuilder<
 
 						await Promise.all(callbacksToExecute);
 
+						// eslint-disable-next-line @typescript-eslint/only-throw-error
 						throw frameworkError;
 					}
 
@@ -346,6 +349,7 @@ export function actionBuilder<
 
 					if (typeof middlewareResult.serverError !== "undefined") {
 						if (utils?.throwServerError) {
+							// eslint-disable-next-line @typescript-eslint/only-throw-error
 							throw middlewareResult.serverError;
 						} else {
 							actionResult.serverError = middlewareResult.serverError;

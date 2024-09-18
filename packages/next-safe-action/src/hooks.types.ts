@@ -136,6 +136,7 @@ export type UseStateActionHookReturn<
 /**
  * Type of the return object of the `useAction` hook.
  */
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export type InferUseActionHookReturn<T extends Function> =
 	T extends SafeActionFn<
 		infer ServerError,
@@ -151,6 +152,7 @@ export type InferUseActionHookReturn<T extends Function> =
 /**
  * Type of the return object of the `useOptimisticAction` hook.
  */
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export type InferUseOptimisticActionHookReturn<T extends Function, State = any> =
 	T extends SafeActionFn<
 		infer ServerError,
@@ -166,6 +168,7 @@ export type InferUseOptimisticActionHookReturn<T extends Function, State = any> 
 /**
  * Type of the return object of the `useStateAction` hook.
  */
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export type InferUseStateActionHookReturn<T extends Function> =
 	T extends SafeStateActionFn<
 		infer ServerError,

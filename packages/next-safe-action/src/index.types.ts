@@ -107,6 +107,7 @@ export type MiddlewareFn<ServerError, MD, Ctx extends object, NextCtx extends ob
 		ctx: Prettify<Ctx>;
 		metadata: MD;
 		next: {
+			// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 			<NC extends object = {}>(opts?: { ctx?: NC }): Promise<MiddlewareResult<ServerError, NC>>;
 		};
 	}): Promise<MiddlewareResult<ServerError, NextCtx>>;
@@ -197,6 +198,7 @@ export type SafeActionUtils<
 /**
  * Infer input types of a safe action.
  */
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export type InferSafeActionFnInput<T extends Function> = T extends
 	| SafeActionFn<any, infer S extends Schema | undefined, infer BAS extends readonly Schema[], any, any, any>
 	| SafeStateActionFn<any, infer S extends Schema | undefined, infer BAS extends readonly Schema[], any, any, any>
@@ -218,6 +220,7 @@ export type InferSafeActionFnInput<T extends Function> = T extends
 /**
  * Infer the result type of a safe action.
  */
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export type InferSafeActionFnResult<T extends Function> = T extends
 	| SafeActionFn<
 			infer ServerError,

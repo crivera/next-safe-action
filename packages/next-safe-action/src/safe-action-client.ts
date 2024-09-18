@@ -23,8 +23,10 @@ export class SafeActionClient<
 	ODVES extends DVES | undefined, // override default validation errors shape
 	MetadataSchema extends Schema | undefined = undefined,
 	MD = MetadataSchema extends Schema ? Infer<MetadataSchema> : undefined, // metadata type (inferred from metadata schema)
+	// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 	Ctx extends object = {},
 	ISF extends (() => Promise<Schema>) | undefined = undefined, // input schema function
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 	IS extends Schema | undefined = ISF extends Function ? Awaited<ReturnType<ISF>> : undefined, // input schema
 	OS extends Schema | undefined = undefined, // output schema
 	const BAS extends readonly Schema[] = [],
