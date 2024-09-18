@@ -1,5 +1,5 @@
 {
-	"name": "next-safe-action",
+	"name": "next-safe-action-open-api",
 	"version": "0.0.0-development",
 	"private": false,
 	"description": "Type safe and validated Server Actions in your Next.js project.",
