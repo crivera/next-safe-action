@@ -14,7 +14,7 @@
 		"deploy:lib": "turbo run deploy --filter=next-safe-action-open-api",
 		"build:pg": "turbo run build --filter=@apps/playground --force"
 	},
-	"author": "Edoardo Ranghieri",
+	"author": "Edoardo Ranghieri - edited by Chris",
 	"license": "MIT",
 	"engines": {
 		"node": ">=18.17"
