@@ -293,10 +293,10 @@ export class SafeActionClient<
 		}).stateAction(serverCodeFn, utils);
 	}
 
-	schemas() {
+	async schemas() {
 		return {
 			metadata: this.#metadata,
-			inputSchema: this.#inputSchemaFn,
+			inputSchema: this.#inputSchemaFn ? await this.#inputSchemaFn() : undefined,
 			outputSchema: this.#outputSchema,
 		};
 	}
