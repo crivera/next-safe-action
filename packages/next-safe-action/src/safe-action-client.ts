@@ -296,7 +296,7 @@ export class SafeActionClient<
 	async schemas() {
 		return {
 			metadata: this.#metadata,
-			inputSchema: this.#inputSchemaFn ? await this.#inputSchemaFn() : undefined,
+			inputSchema: this.#inputSchemaFn ? ((await this.#inputSchemaFn()) as IS) : undefined,
 			outputSchema: this.#outputSchema,
 		};
 	}
