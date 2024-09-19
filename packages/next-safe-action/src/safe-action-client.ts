@@ -294,9 +294,13 @@ export class SafeActionClient<
 	}
 
 	async schemas() {
+		let inputSchema: Schema | undefined = undefined;
+		if (typeof this.#inputSchemaFn !== "undefined") {
+			inputSchema = await this.#inputSchemaFn();
+		}
 		return {
 			metadata: this.#metadata,
-			inputSchema: this.#inputSchemaFn ? ((await this.#inputSchemaFn()) as IS) : undefined,
+			inputSchema: inputSchema,
 			outputSchema: this.#outputSchema,
 		};
 	}
