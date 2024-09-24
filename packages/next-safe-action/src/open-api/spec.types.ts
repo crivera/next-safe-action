@@ -1,1 +1,0 @@
-export { generateOpenApiInfo } from "./spec";

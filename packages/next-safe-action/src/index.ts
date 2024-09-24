@@ -24,6 +24,8 @@ export {
 } from "./validation-errors";
 
 export type * from "./index.types";
+export { createOpenApiServerActionRouter, createRouteHandlers } from "./open-api/router";
+export { generateOpenApiInfo } from "./open-api/spec";
 export type * from "./validation-errors.types";
 
 /**

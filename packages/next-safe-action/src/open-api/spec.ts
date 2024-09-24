@@ -125,7 +125,7 @@ async function generateMethodSpec(method: "GET" | "POST" | "PUT" | "DELETE", rou
 	}
 }
 
-export const errorResponseObject: OpenAPIV3.ResponseObject = {
+const errorResponseObject: OpenAPIV3.ResponseObject = {
 	description: "Error response",
 	content: {
 		"application/json": {
@@ -139,7 +139,7 @@ export const errorResponseObject: OpenAPIV3.ResponseObject = {
 	},
 };
 
-export const getRequestBodyObject = (
+const getRequestBodyObject = (
 	schema: unknown,
 	pathParameters: string[],
 	contentTypes: OpenApiContentType[]
@@ -175,7 +175,7 @@ export const getRequestBodyObject = (
 	};
 };
 
-export const getResponsesObject = (
+const getResponsesObject = (
 	schema: unknown,
 	example?: Record<string, any>,
 	headers?: Record<string, OpenAPIV3.HeaderObject | OpenAPIV3.ReferenceObject>
@@ -204,7 +204,7 @@ export const getResponsesObject = (
 	};
 };
 
-export const getParameterObjects = (
+const getParameterObjects = (
 	schema: unknown,
 	pathParameters: string[],
 	inType: "all" | "path" | "query"
